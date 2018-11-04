@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+</head>
+<body>
+	<h1>Welcome Home!</h1>
+	<a href="/login">login</a>
+		<table border="1">
+		<tr>
+			<th>Post</th>
+			<th>Date</th>
+		</tr>
+		<% for(var i = 0; i < articleList.length; i++){ %>
+
+		<tr>
+			<td><%= articleList[i].data %></td>
+			<td><%= articleList[i].date %></td>
+		</tr>
+		
+		<% } %>
+
+	</table>
+
+</body>
+</html>

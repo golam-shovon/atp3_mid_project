@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+</head>
+<body>
+	<h1>Articles Admin side!</h1>
+	<a href="/home">Back</a>
+		<a href="/home/articlepost">Create</a> | <a href="/logout">Logout</a> 
+		<table border="1">
+		<tr>
+			<th>Post</th>
+			<th>Date</th>
+			<th>ACTION</th>
+		</tr>
+		<% for(var i = 0; i < articleList.length; i++){ %>
+
+		<tr>
+			<td><%= articleList[i].data %></td>
+			<td><%= articleList[i].date %></td>
+			<td><a href="/home/edit/<%= articleList[i].id %>">Edit</a> | <a href="/home/delete/<%= articleList[i].id %>"> Delete</a> </td>
+		</tr>
+		
+		<% } %>
+
+	</table>
+
+</body>
+</html>

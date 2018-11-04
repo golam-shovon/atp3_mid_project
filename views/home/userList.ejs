@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+</head>
+<body>
+	<h1>User List!</h1>
+
+	<a href="/home">Back</a>
+	
+	<table border="1">
+		<tr>
+			<th>Id</th>
+			<th>User Name</th>
+		
+		</tr>
+		<% for(var i = 0; i < userList.length; i++){ %>
+
+		<tr>
+			<td><%= userList[i].id %></td>
+			<td><%= userList[i].username %></td>
+			<td><%= userList[i].type %></td>
+		</tr>
+		
+		<% } %>
+
+	</table>
+</body>
+</html>
